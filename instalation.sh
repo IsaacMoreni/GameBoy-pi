@@ -47,8 +47,6 @@ cp configFiles/antimicrox_settings.ini /home/$SUDO_USER/.config/antimicrox/
 
 chown -R $SUDO_USER:$SUDO_USER /home/$SUDO_USER/.config/
 
-cp -r /home/$SUDO_USER/GameBoy-pi/ConsoleGUI/ home/$SUDO_USER/
-
 cd /home/$SUDO_USER
 
 git clone https://github.com/visualboyadvance-m/visualboyadvance-m.git
@@ -59,7 +57,7 @@ mkdir build && cd build
 cmake .. -G Ninja
 ninja
 
-mv ./visualboyadvance-m /home/$SUDO_USER/ConsoleGUI/vba-m
+mv ./visualboyadvance-m /home/$SUDO_USER/GameBoy-pi/ConsoleGUI/vba-m
 rm -rf /home/$SUDO_USER/visualboyadvance-m/
 
 cd /home/$SUDO_USER
